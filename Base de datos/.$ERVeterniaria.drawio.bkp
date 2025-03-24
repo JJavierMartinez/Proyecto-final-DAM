@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram name="Page-1" id="efa7a0a1-bf9b-a30e-e6df-94a7791c09e9">
+    <mxGraphModel dx="2074" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-133" value="Usuarios" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="200" height="450" as="geometry">
+            <mxRectangle x="40" y="40" width="140" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-135" value="ID_Usuario" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="40" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-136" value="Nombre" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="70" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-137" value="Apellidos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="100" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-138" value="DNI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="130" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-139" value="User" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="160" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-140" value="Rol" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="190" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-141" value="Fecha_nac" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="220" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-142" value="Fecha_alta" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="250" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-143" value="Telefono" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="280" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-144" value="Correo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="310" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-145" value="Direccion" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-133" vertex="1">
+          <mxGeometry x="15" y="340" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-146" value="Pacientes" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="40" width="200" height="450" as="geometry">
+            <mxRectangle x="40" y="40" width="140" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-147" value="ID_Paciente" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-146" vertex="1">
+          <mxGeometry x="15" y="40" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-148" value="Nombre" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-146" vertex="1">
+          <mxGeometry x="15" y="70" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-149" value="Apellidos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-146" vertex="1">
+          <mxGeometry x="15" y="100" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-150" value="DNI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-146" vertex="1">
+          <mxGeometry x="15" y="130" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-1UyKmfSDVHLoH2vXmBo-153" value="Fecha_nac" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-1UyKmfSDVHLoH2vXmBo-146" vertex="1">
+          <mxGeometry x="15" y="160" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-l0_Bi9cWrgQeHjT3zTq-1" value="Pacientes" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="200" height="450" as="geometry">
+            <mxRectangle x="40" y="40" width="140" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-l0_Bi9cWrgQeHjT3zTq-2" value="ID_Paciente" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="-l0_Bi9cWrgQeHjT3zTq-1">
+          <mxGeometry x="15" y="40" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-l0_Bi9cWrgQeHjT3zTq-3" value="Nombre" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="-l0_Bi9cWrgQeHjT3zTq-1">
+          <mxGeometry x="15" y="70" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-l0_Bi9cWrgQeHjT3zTq-4" value="Apellidos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="-l0_Bi9cWrgQeHjT3zTq-1">
+          <mxGeometry x="15" y="100" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-l0_Bi9cWrgQeHjT3zTq-5" value="DNI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="-l0_Bi9cWrgQeHjT3zTq-1">
+          <mxGeometry x="15" y="130" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-l0_Bi9cWrgQeHjT3zTq-6" value="Fecha_nac" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="-l0_Bi9cWrgQeHjT3zTq-1">
+          <mxGeometry x="15" y="160" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
