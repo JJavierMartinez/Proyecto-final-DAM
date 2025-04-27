@@ -3,12 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.veterinaria.model;
+package com.veterinaria.veterinaria.model;
+
+
+import jakarta.persistence.*;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author jamar
  */
+@Getter  
+@Setter  
+@NoArgsConstructor  
+@AllArgsConstructor
 @Entity
 @Table(name = "Enfermedades")
 public class Enfermedad {
@@ -22,5 +34,5 @@ public class Enfermedad {
     @OneToMany(mappedBy = "enfermedad")
     private List<HistorialEnfermedad> historiales;
     
-    // Getters, Setters, Constructors
+    
 }

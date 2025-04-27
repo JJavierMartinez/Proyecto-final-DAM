@@ -3,12 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.veterinaria.model;
+package com.veterinaria.veterinaria.model;
+
+
+import jakarta.persistence.*;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author jamar
  */
+@Getter  
+@Setter  
+@NoArgsConstructor  
+@AllArgsConstructor
 @Entity
 @Table(name = "Roles")
 public class Rol {
@@ -22,5 +34,5 @@ public class Rol {
     @OneToMany(mappedBy = "rol")
     private List<Usuario> usuarios;
     
-    // Getters, Setters, Constructors
+    
 }

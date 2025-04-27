@@ -3,18 +3,31 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.veterinaria.model;
+package com.veterinaria.veterinaria.model;
+
+
+import jakarta.persistence.*;
+import java.util.Date;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author jamar
  */
+@Getter  
+@Setter  
+@NoArgsConstructor  
+@AllArgsConstructor
 @Entity
 @Table(name = "Usuarios")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUsuario;
+    private Long id;
     
     private String nombre;
     private String apellidos;
@@ -36,5 +49,5 @@ public class Usuario {
     @OneToMany(mappedBy = "veterinario")
     private List<Cita> citas;
     
-    // Getters, Setters, Constructors
+    
 }
