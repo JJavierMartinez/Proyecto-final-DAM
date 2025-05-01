@@ -26,8 +26,8 @@ public class CitaService {
         return citaRepository.findAll();
     }
 
-    public Optional<Cita> getCitaById(Long id) {
-        return citaRepository.findById(id);
+    public Optional<Cita> getCitaById(Long idCita) {
+        return citaRepository.findById(idCita);
     }
 
     public Cita saveCita(Cita cita) {

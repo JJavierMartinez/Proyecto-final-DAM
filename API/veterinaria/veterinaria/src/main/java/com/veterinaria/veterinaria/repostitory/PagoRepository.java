@@ -10,11 +10,13 @@ import com.veterinaria.veterinaria.model.Pago;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author jamar
  */
+@Repository
 public interface PagoRepository extends JpaRepository<Pago, Long>{
      List<Pago> findByMetodoPago(String metodoPago);
     

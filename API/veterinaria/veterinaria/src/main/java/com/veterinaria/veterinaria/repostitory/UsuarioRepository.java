@@ -10,11 +10,13 @@ import com.veterinaria.veterinaria.model.Usuario;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author jamar
  */
+@Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
     Optional<Usuario> findByDni(String dni);
     Optional<Usuario> findByUser(String username);

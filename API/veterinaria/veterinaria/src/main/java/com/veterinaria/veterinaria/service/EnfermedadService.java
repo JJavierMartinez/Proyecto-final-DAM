@@ -25,16 +25,16 @@ public class EnfermedadService {
         return enfermedadRepository.findAll();
     }
 
-    public Optional<Enfermedad> getEnfermedadById(Long id) {
-        return enfermedadRepository.findById(id);
+    public Optional<Enfermedad> getEnfermedadById(Long idEnfermedad) {
+        return enfermedadRepository.findById(idEnfermedad);
     }
 
     public Enfermedad saveEnfermedad(Enfermedad enfermedad) {
         return enfermedadRepository.save(enfermedad);
     }
 
-    public void deleteEnfermedad(Long id) {
-        enfermedadRepository.deleteById(id);
+    public void deleteEnfermedad(Long idEnfermedad) {
+        enfermedadRepository.deleteById(idEnfermedad);
     }
 
     public List<Enfermedad> getEnfermedadesByNombre(String nombre) {

@@ -11,11 +11,13 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author jamar
  */
+@Repository
 public interface CitaRepository extends JpaRepository<Cita, Long>{
     List<Cita> findByPacienteId(Long pacienteId);
     List<Cita> findByVeterinarioId(Long veterinarioId);

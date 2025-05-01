@@ -25,16 +25,16 @@ public class FichaService {
         return fichaRepository.findAll();
     }
 
-    public Optional<Ficha> getFichaById(Long id) {
-        return fichaRepository.findById(id);
+    public Optional<Ficha> getFichaByIdFicha(Long idFicha) {
+        return fichaRepository.findById(idFicha);
     }
 
     public Ficha saveFicha(Ficha ficha) {
         return fichaRepository.save(ficha);
     }
 
-    public void deleteFicha(Long id) {
-        fichaRepository.deleteById(id);
+    public void deleteFicha(Long idFicha) {
+        fichaRepository.deleteById(idFicha);
     }
 
     public List<Ficha> getFichasByPacienteId(Long pacienteId) {

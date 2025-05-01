@@ -9,11 +9,13 @@ package com.veterinaria.veterinaria.repostitory;
 import com.veterinaria.veterinaria.model.Enfermedad;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author jamar
  */
+@Repository
 public interface EnfermedadRepository extends JpaRepository<Enfermedad, Long>{
     List<Enfermedad> findByNombreContainingIgnoreCase(String nombre);
 }
