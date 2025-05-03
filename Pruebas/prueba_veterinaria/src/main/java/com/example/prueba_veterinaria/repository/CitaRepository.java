@@ -16,8 +16,8 @@ import org.springframework.stereotype.Repository;
  * @author jamar
  */
 @Repository
-public interface CitaRepository extends JpaRepository<Cita, UUID>{
-    List<Cita> findByPacienteUuid(UUID pacienteId);
-    List<Cita> findByUsuarioUuid(UUID veterinarioId);
+public interface CitaRepository extends JpaRepository<Cita, Long>{
+    List<Cita> findByPacienteId(Long pacienteId);
+    List<Cita> findByUsuarioId(Long veterinarioId);
     List<Cita> findByFecha(Date fecha);
 }

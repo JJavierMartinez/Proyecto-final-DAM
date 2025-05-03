@@ -24,7 +24,7 @@ public class EnfermedadService {
         return enfermedadRepository.findAll();
     }
 
-    public Enfermedad findById(UUID id) {
+    public Enfermedad findById(Long id) {
         return enfermedadRepository.findById(id).orElse(null);
     }
 
@@ -32,7 +32,7 @@ public class EnfermedadService {
         return enfermedadRepository.save(enfermedad);
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         enfermedadRepository.deleteById(id);
     }
 }

@@ -24,7 +24,7 @@ public class HistorialService {
         return historialRepository.findAll();
     }
 
-    public Historial findById(UUID id) {
+    public Historial findById(Long id) {
         return historialRepository.findById(id).orElse(null);
     }
 
@@ -32,11 +32,11 @@ public class HistorialService {
         return historialRepository.save(historial);
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         historialRepository.deleteById(id);
     }
 
-    public List<Historial> findByPacienteId(UUID pacienteId) {
-        return historialRepository.findByPacienteUuid(pacienteId);
+    public List<Historial> findByPacienteId(Long pacienteId) {
+        return historialRepository.findByPacienteId(pacienteId);
     }
 }

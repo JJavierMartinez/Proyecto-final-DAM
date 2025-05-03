@@ -14,8 +14,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author jamar
  */
-public interface UsuarioRepository extends JpaRepository<Usuario, UUID>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
     Optional<Usuario> findByUser(String username);
     Optional<Usuario> findByCorreo(String email);
-    List<Usuario> findByRolUuid(UUID rolId);
+    List<Usuario> findByRolId(Long rolId);
 }

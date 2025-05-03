@@ -13,23 +13,23 @@ import java.util.UUID;
  * @author jamar
  */
 public class HistorialEnfermedadId implements Serializable{
-    private UUID historial;
-    private UUID enfermedad;
+    private Long historial;
+    private Long enfermedad;
 
     // Constructores
     public HistorialEnfermedadId() {}
 
-    public HistorialEnfermedadId(UUID historial, UUID enfermedad) {
+    public HistorialEnfermedadId(Long historial, Long enfermedad) {
         this.historial = historial;
         this.enfermedad = enfermedad;
     }
 
     // Getters y setters
-    public UUID getHistorial() { return historial; }
-    public void setHistorial(UUID historial) { this.historial = historial; }
+    public Long getHistorial() { return historial; }
+    public void setHistorial(Long historial) { this.historial = historial; }
     
-    public UUID getEnfermedad() { return enfermedad; }
-    public void setEnfermedad(UUID enfermedad) { this.enfermedad = enfermedad; }
+    public Long getEnfermedad() { return enfermedad; }
+    public void setEnfermedad(Long enfermedad) { this.enfermedad = enfermedad; }
 
     // equals() y hashCode()
     @Override

@@ -36,7 +36,7 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Paciente> getPacienteById(@PathVariable UUID id) {
+    public ResponseEntity<Paciente> getPacienteById(@PathVariable Long id) {
         Paciente paciente = pacienteService.findById(id);
         return paciente != null ? ResponseEntity.ok(paciente) : ResponseEntity.notFound().build();
     }
@@ -44,12 +44,12 @@ public class PacienteController {
     @PostMapping
     public ResponseEntity<Paciente> createPaciente(@RequestBody Paciente paciente) {
         Paciente savedPaciente = pacienteService.save(paciente);
-        return ResponseEntity.created(URI.create("/api/pacientes/" + savedPaciente.getUuid())).body(savedPaciente);
+        return ResponseEntity.created(URI.create("/api/pacientes/" + savedPaciente.getId())).body(savedPaciente);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Paciente> updatePaciente(@PathVariable UUID id, @RequestBody Paciente paciente) {
-        if (!id.equals(paciente.getUuid())) {
+    public ResponseEntity<Paciente> updatePaciente(@PathVariable Long id, @RequestBody Paciente paciente) {
+        if (!id.equals(paciente.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Paciente updatedPaciente = pacienteService.save(paciente);
@@ -57,13 +57,13 @@ public class PacienteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePaciente(@PathVariable UUID id) {
+    public ResponseEntity<Void> deletePaciente(@PathVariable Long id) {
         pacienteService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/dueno/{duenoId}")
-    public List<Paciente> getPacientesByDueno(@PathVariable UUID duenoId) {
+    public List<Paciente> getPacientesByDueno(@PathVariable Long duenoId) {
         return pacienteService.findByDuenoId(duenoId);
     }
 

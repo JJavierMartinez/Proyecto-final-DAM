@@ -24,9 +24,9 @@ import java.util.UUID;
 @Table(name="Citas")
 public class Cita {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Cita")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="Motivo")
     private String motivo;
@@ -49,8 +49,8 @@ public class Cita {
     public Cita() {
     }
 
-    public Cita(UUID uuid, String motivo, Date fecha, Usuario usuario, Pago pago, Paciente paciente) {
-        this.uuid = uuid;
+    public Cita(Long id, String motivo, Date fecha, Usuario usuario, Pago pago, Paciente paciente) {
+        this.id = id;
         this.motivo = motivo;
         this.fecha = fecha;
         this.usuario = usuario;
@@ -58,12 +58,12 @@ public class Cita {
         this.paciente = paciente;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getMotivo() {
@@ -105,6 +105,8 @@ public class Cita {
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
+
+    
     
     
 }

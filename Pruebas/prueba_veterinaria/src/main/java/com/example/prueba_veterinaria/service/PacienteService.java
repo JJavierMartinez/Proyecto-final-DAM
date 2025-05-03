@@ -24,7 +24,7 @@ public class PacienteService {
         return pacienteRepository.findAll();
     }
 
-    public Paciente findById(UUID id) {
+    public Paciente findById(Long id) {
         return pacienteRepository.findById(id).orElse(null);
     }
 
@@ -32,12 +32,12 @@ public class PacienteService {
         return pacienteRepository.save(paciente);
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         pacienteRepository.deleteById(id);
     }
 
-    public List<Paciente> findByDuenoId(UUID duenoId) {
-        return pacienteRepository.findByDuenoUuid(duenoId);
+    public List<Paciente> findByDuenoId(Long duenoId) {
+        return pacienteRepository.findByDuenoId(duenoId);
     }
 
     public List<Paciente> findByEspecie(String especie) {

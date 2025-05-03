@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author jamar
  */
 @Repository
-public interface EnfermedadRepository extends JpaRepository<Enfermedad, UUID>{
+public interface EnfermedadRepository extends JpaRepository<Enfermedad, Long>{
     
 }

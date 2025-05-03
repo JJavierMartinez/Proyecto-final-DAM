@@ -37,7 +37,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Usuario> getUsuarioById(@PathVariable UUID id) {
+    public ResponseEntity<Usuario> getUsuarioById(@PathVariable Long id) {
         Usuario usuario = usuarioService.findById(id);
         return usuario != null ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build();
     }
@@ -45,12 +45,12 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuario) {
         Usuario savedUsuario = usuarioService.save(usuario);
-        return ResponseEntity.created(URI.create("/api/usuarios/" + savedUsuario.getUuid())).body(savedUsuario);
+        return ResponseEntity.created(URI.create("/api/usuarios/" + savedUsuario.getId())).body(savedUsuario);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Usuario> updateUsuario(@PathVariable UUID id, @RequestBody Usuario usuario) {
-        if (!id.equals(usuario.getUuid())) {
+    public ResponseEntity<Usuario> updateUsuario(@PathVariable Long id, @RequestBody Usuario usuario) {
+        if (!id.equals(usuario.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Usuario updatedUsuario = usuarioService.save(usuario);
@@ -58,7 +58,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUsuario(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteUsuario(@PathVariable Long id) {
         usuarioService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
@@ -76,7 +76,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/rol/{rolId}")
-    public List<Usuario> getUsuariosByRol(@PathVariable UUID rolId) {
+    public List<Usuario> getUsuariosByRol(@PathVariable Long rolId) {
         return usuarioService.findByRol(rolId);
     }
 }

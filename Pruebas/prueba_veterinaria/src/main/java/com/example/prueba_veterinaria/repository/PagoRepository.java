@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author jamar
  */
 @Repository
-public interface PagoRepository extends  JpaRepository<Pago, UUID>{
+public interface PagoRepository extends  JpaRepository<Pago, Long>{
     
 }

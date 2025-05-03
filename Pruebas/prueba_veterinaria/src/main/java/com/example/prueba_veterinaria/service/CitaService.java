@@ -25,7 +25,7 @@ public class CitaService {
         return citaRepository.findAll();
     }
 
-    public Cita findById(UUID id) {
+    public Cita findById(Long id) {
         return citaRepository.findById(id).orElse(null);
     }
 
@@ -33,16 +33,16 @@ public class CitaService {
         return citaRepository.save(cita);
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         citaRepository.deleteById(id);
     }
 
-    public List<Cita> findByPacienteId(UUID pacienteId) {
-        return citaRepository.findByPacienteUuid(pacienteId);
+    public List<Cita> findByPacienteId(Long pacienteId) {
+        return citaRepository.findByPacienteId(pacienteId);
     }
 
-    public List<Cita> findByVeterinarioId(UUID veterinarioId) {
-        return citaRepository.findByUsuarioUuid(veterinarioId);
+    public List<Cita> findByVeterinarioId(Long veterinarioId) {
+        return citaRepository.findByUsuarioId(veterinarioId);
     }
 
     public List<Cita> findByFecha(Date fecha) {

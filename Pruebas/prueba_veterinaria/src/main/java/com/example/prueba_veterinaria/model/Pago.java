@@ -4,6 +4,7 @@
  */
 package com.example.prueba_veterinaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,9 +27,9 @@ import java.util.UUID;
 public class Pago {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Pago")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="Monto")
     private Float monto;
@@ -40,25 +41,26 @@ public class Pago {
     private String metodoPago;
     
    @OneToMany(mappedBy = "pago")
+   @JsonIgnore
    private List<Cita> citas;
 
     public Pago() {
     }
 
-    public Pago(UUID uuid, Float monto, Date fecha, String metodoPago, List<Cita> citas) {
-        this.uuid = uuid;
+    public Pago(Long id, Float monto, Date fecha, String metodoPago, List<Cita> citas) {
+        this.id = id;
         this.monto = monto;
         this.fecha = fecha;
         this.metodoPago = metodoPago;
         this.citas = citas;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Float getMonto() {
@@ -92,6 +94,8 @@ public class Pago {
     public void setCitas(List<Cita> citas) {
         this.citas = citas;
     }
+
+    
    
     
 }

@@ -4,6 +4,7 @@
  */
 package com.example.prueba_veterinaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,9 +27,9 @@ import java.util.UUID;
 @Table(name="Pacientes")
 public class Paciente {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Paciente")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="Nombre")
     private String nombre;
@@ -55,6 +56,7 @@ public class Paciente {
     private Date fecha_registro;
     
     @OneToMany(mappedBy = "paciente")
+    @JsonIgnore
     List<Historial> historial; 
     
     @ManyToOne
@@ -64,8 +66,8 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(UUID uuid, String nombre, String apellidos, String dniMascota, Date fecha_nac, boolean seguro, String especie, String raza, Date fecha_registro, List<Historial> historial, Usuario dueno) {
-        this.uuid = uuid;
+    public Paciente(Long id, String nombre, String apellidos, String dniMascota, Date fecha_nac, boolean seguro, String especie, String raza, Date fecha_registro, List<Historial> historial, Usuario dueno) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dniMascota = dniMascota;
@@ -78,12 +80,12 @@ public class Paciente {
         this.dueno = dueno;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -165,6 +167,8 @@ public class Paciente {
     public void setDueno(Usuario dueno) {
         this.dueno = dueno;
     }
+
+    
     
     
     

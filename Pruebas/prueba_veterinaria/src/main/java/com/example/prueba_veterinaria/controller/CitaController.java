@@ -9,7 +9,6 @@ import com.example.prueba_veterinaria.service.CitaService;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,7 +37,7 @@ public class CitaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cita> getCitaById(@PathVariable UUID id) {
+    public ResponseEntity<Cita> getCitaById(@PathVariable Long id) {
         Cita cita = citaService.findById(id);
         return cita != null ? ResponseEntity.ok(cita) : ResponseEntity.notFound().build();
     }
@@ -46,12 +45,12 @@ public class CitaController {
     @PostMapping
     public ResponseEntity<Cita> createCita(@RequestBody Cita cita) {
         Cita savedCita = citaService.save(cita);
-        return ResponseEntity.created(URI.create("/api/citas/" + savedCita.getUuid())).body(savedCita);
+        return ResponseEntity.created(URI.create("/api/citas/" + savedCita.getId())).body(savedCita);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cita> updateCita(@PathVariable UUID id, @RequestBody Cita cita) {
-        if (!id.equals(cita.getUuid())) {
+    public ResponseEntity<Cita> updateCita(@PathVariable Long id, @RequestBody Cita cita) {
+        if (!id.equals(cita.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Cita updatedCita = citaService.save(cita);
@@ -59,18 +58,18 @@ public class CitaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCita(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteCita(@PathVariable Long id) {
         citaService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/paciente/{pacienteId}")
-    public List<Cita> getCitasByPaciente(@PathVariable UUID pacienteId) {
+    public List<Cita> getCitasByPaciente(@PathVariable Long pacienteId) {
         return citaService.findByPacienteId(pacienteId);
     }
 
     @GetMapping("/veterinario/{veterinarioId}")
-    public List<Cita> getCitasByVeterinario(@PathVariable UUID veterinarioId) {
+    public List<Cita> getCitasByVeterinario(@PathVariable Long veterinarioId) {
         return citaService.findByVeterinarioId(veterinarioId);
     }
 

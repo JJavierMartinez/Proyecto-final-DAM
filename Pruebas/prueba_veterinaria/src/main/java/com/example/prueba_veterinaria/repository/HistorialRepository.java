@@ -15,6 +15,6 @@ import org.springframework.stereotype.Repository;
  * @author jamar
  */
 @Repository
-public interface HistorialRepository extends JpaRepository<Historial, UUID>{
-    List<Historial> findByPacienteUuid(UUID pacienteId);
+public interface HistorialRepository extends JpaRepository<Historial, Long>{
+    List<Historial> findByPacienteId(Long pacienteId);
 }

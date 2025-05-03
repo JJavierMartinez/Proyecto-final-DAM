@@ -4,6 +4,7 @@
  */
 package com.example.prueba_veterinaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -17,9 +18,9 @@ import java.util.UUID;
 @Table(name="Usuarios")
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Usuario")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="apellidos")
     private String apellidos;
@@ -50,16 +51,18 @@ public class Usuario {
     private Rol rol;
     
     @OneToMany(mappedBy = "dueno")
+    @JsonIgnore
     private List<Paciente> pacientes;
     
     @OneToMany(mappedBy = "usuario")
+    @JsonIgnore
     private List<Cita> citas;
 
     public Usuario() {
     }
 
-    public Usuario(UUID uuid, String apellidos, String DNI, String user, Date fecha_nac, Date fecha_alta, String telefono, String correo, String contrasena, Rol rol, List<Paciente> pacientes, List<Cita> citas) {
-        this.uuid = uuid;
+    public Usuario(Long id, String apellidos, String DNI, String user, Date fecha_nac, Date fecha_alta, String telefono, String correo, String contrasena, Rol rol, List<Paciente> pacientes, List<Cita> citas) {
+        this.id = id;
         this.apellidos = apellidos;
         this.DNI = DNI;
         this.user = user;
@@ -73,12 +76,12 @@ public class Usuario {
         this.citas = citas;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getApellidos() {
@@ -168,6 +171,8 @@ public class Usuario {
     public void setCitas(List<Cita> citas) {
         this.citas = citas;
     }
+
+    
     
     
     

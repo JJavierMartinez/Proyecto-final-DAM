@@ -4,6 +4,7 @@
  */
 package com.example.prueba_veterinaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,9 +23,9 @@ import java.util.UUID;
 @Table(name="Enfermedades")
 public class Enfermedad {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Enfermedad")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="Nombre")
     private String nombre;
@@ -33,24 +34,25 @@ public class Enfermedad {
     private String descripcion;
     
     @OneToMany(mappedBy = "enfermedad")
+    @JsonIgnore
     private List<HistorialEnfermedad> historiales;
 
     public Enfermedad() {
     }
 
-    public Enfermedad(UUID uuid, String nombre, String descripcion, List<HistorialEnfermedad> historiales) {
-        this.uuid = uuid;
+    public Enfermedad(Long id, String nombre, String descripcion, List<HistorialEnfermedad> historiales) {
+        this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.historiales = historiales;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -76,6 +78,8 @@ public class Enfermedad {
     public void setHistoriales(List<HistorialEnfermedad> historiales) {
         this.historiales = historiales;
     }
+
+    
     
     
     

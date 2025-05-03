@@ -4,6 +4,7 @@
  */
 package com.example.prueba_veterinaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 import java.util.UUID;
@@ -16,9 +17,9 @@ import java.util.UUID;
 @Table(name="Rol")
 public class Rol {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Rol")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="Rol")
     private String rol;
@@ -27,24 +28,25 @@ public class Rol {
     private String descripcion;
     
     @OneToMany(mappedBy = "rol")
+    @JsonIgnore
     private List<Usuario> usuarios;
 
     public Rol() {
     }
 
-    public Rol(UUID uuid, String rol, String descripcion, List<Usuario> usuarios) {
-        this.uuid = uuid;
+    public Rol(Long id, String rol, String descripcion, List<Usuario> usuarios) {
+        this.id = id;
         this.rol = rol;
         this.descripcion = descripcion;
         this.usuarios = usuarios;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getRol() {
@@ -70,6 +72,8 @@ public class Rol {
     public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
+
+    
     
     
 }

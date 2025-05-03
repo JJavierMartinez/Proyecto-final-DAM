@@ -4,6 +4,7 @@
  */
 package com.example.prueba_veterinaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,9 +27,9 @@ import java.util.UUID;
 public class Historial {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Historial")
-    private UUID uuid;
+    private Long id;
     
     @Column(name="Fecha_evento")
     private Date fecha_evento;
@@ -44,26 +45,27 @@ public class Historial {
     private Paciente paciente;
     
     @OneToMany(mappedBy = "historial")
+    @JsonIgnore
     private List<HistorialEnfermedad> enfermedades;
 
     public Historial() {
     }
 
-    public Historial(UUID uuid, Date fecha_evento, String tipo_evento, String notas, Paciente paciente, List<HistorialEnfermedad> enfermedades) {
-        this.uuid = uuid;
+    public Historial(Long id, Date fecha_evento, String tipo_evento, String notas, Paciente paciente, List<HistorialEnfermedad> enfermedades) {
+        this.id = id;
         this.fecha_evento = fecha_evento;
         this.tipo_evento = tipo_evento;
         this.notas = notas;
         this.paciente = paciente;
         this.enfermedades = enfermedades;
     }
-
-    public UUID getUuid() {
-        return uuid;
+    
+    public Long getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Date getFecha_evento() {
@@ -105,6 +107,8 @@ public class Historial {
     public void setEnfermedades(List<HistorialEnfermedad> enfermedades) {
         this.enfermedades = enfermedades;
     }
+
+    
     
     
 }

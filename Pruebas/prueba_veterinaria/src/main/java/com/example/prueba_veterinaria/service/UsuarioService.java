@@ -25,7 +25,7 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Usuario findById(UUID id) {
+    public Usuario findById(Long id) {
         return usuarioRepository.findById(id).orElse(null);
     }
 
@@ -33,7 +33,7 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         usuarioRepository.deleteById(id);
     }
 
@@ -45,7 +45,7 @@ public class UsuarioService {
         return usuarioRepository.findByCorreo(email);
     }
 
-    public List<Usuario> findByRol(UUID rolId) {
-        return usuarioRepository.findByRolUuid(rolId);
+    public List<Usuario> findByRol(Long rolId) {
+        return usuarioRepository.findByRolId(rolId);
     }
 }

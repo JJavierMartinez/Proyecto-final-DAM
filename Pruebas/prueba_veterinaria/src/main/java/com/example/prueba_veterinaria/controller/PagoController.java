@@ -36,7 +36,7 @@ public class PagoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pago> getPagoById(@PathVariable UUID id) {
+    public ResponseEntity<Pago> getPagoById(@PathVariable Long id) {
         Pago pago = pagoService.findById(id);
         return pago != null ? ResponseEntity.ok(pago) : ResponseEntity.notFound().build();
     }
@@ -44,12 +44,12 @@ public class PagoController {
     @PostMapping
     public ResponseEntity<Pago> createPago(@RequestBody Pago pago) {
         Pago savedPago = pagoService.save(pago);
-        return ResponseEntity.created(URI.create("/api/pagos/" + savedPago.getUuid())).body(savedPago);
+        return ResponseEntity.created(URI.create("/api/pagos/" + savedPago.getId())).body(savedPago);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Pago> updatePago(@PathVariable UUID id, @RequestBody Pago pago) {
-        if (!id.equals(pago.getUuid())) {
+    public ResponseEntity<Pago> updatePago(@PathVariable Long id, @RequestBody Pago pago) {
+        if (!id.equals(pago.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Pago updatedPago = pagoService.save(pago);
@@ -57,7 +57,7 @@ public class PagoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePago(@PathVariable UUID id) {
+    public ResponseEntity<Void> deletePago(@PathVariable Long id) {
         pagoService.deleteById(id);
         return ResponseEntity.noContent().build();
     }

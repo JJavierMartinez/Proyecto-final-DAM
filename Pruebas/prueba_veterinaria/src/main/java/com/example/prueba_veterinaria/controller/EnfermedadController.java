@@ -36,7 +36,7 @@ public class EnfermedadController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Enfermedad> getEnfermedadById(@PathVariable UUID id) {
+    public ResponseEntity<Enfermedad> getEnfermedadById(@PathVariable Long id) {
         Enfermedad enfermedad = enfermedadService.findById(id);
         return enfermedad != null ? ResponseEntity.ok(enfermedad) : ResponseEntity.notFound().build();
     }
@@ -44,12 +44,12 @@ public class EnfermedadController {
     @PostMapping
     public ResponseEntity<Enfermedad> createEnfermedad(@RequestBody Enfermedad enfermedad) {
         Enfermedad savedEnfermedad = enfermedadService.save(enfermedad);
-        return ResponseEntity.created(URI.create("/api/enfermedades/" + savedEnfermedad.getUuid())).body(savedEnfermedad);
+        return ResponseEntity.created(URI.create("/api/enfermedades/" + savedEnfermedad.getId())).body(savedEnfermedad);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Enfermedad> updateEnfermedad(@PathVariable UUID id, @RequestBody Enfermedad enfermedad) {
-        if (!id.equals(enfermedad.getUuid())) {
+    public ResponseEntity<Enfermedad> updateEnfermedad(@PathVariable Long id, @RequestBody Enfermedad enfermedad) {
+        if (!id.equals(enfermedad.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Enfermedad updatedEnfermedad = enfermedadService.save(enfermedad);
@@ -57,7 +57,7 @@ public class EnfermedadController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteEnfermedad(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteEnfermedad(@PathVariable Long id) {
         enfermedadService.deleteById(id);
         return ResponseEntity.noContent().build();
     }

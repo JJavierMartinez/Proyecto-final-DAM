@@ -12,6 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author jamar
  */
-public interface RolRepository extends JpaRepository<Rol, UUID>{
+public interface RolRepository extends JpaRepository<Rol, Long>{
     Rol findByRol(String rol);
 }

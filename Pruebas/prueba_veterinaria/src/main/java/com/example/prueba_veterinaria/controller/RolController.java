@@ -36,7 +36,7 @@ public class RolController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Rol> getRolById(@PathVariable UUID id) {
+    public ResponseEntity<Rol> getRolById(@PathVariable Long id) {
         Rol rol = rolService.findById(id);
         return rol != null ? ResponseEntity.ok(rol) : ResponseEntity.notFound().build();
     }
@@ -44,12 +44,12 @@ public class RolController {
     @PostMapping
     public ResponseEntity<Rol> createRol(@RequestBody Rol rol) {
         Rol savedRol = rolService.save(rol);
-        return ResponseEntity.created(URI.create("/api/roles/" + savedRol.getUuid())).body(savedRol);
+        return ResponseEntity.created(URI.create("/api/roles/" + savedRol.getId())).body(savedRol);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Rol> updateRol(@PathVariable UUID id, @RequestBody Rol rol) {
-        if (!id.equals(rol.getUuid())) {
+    public ResponseEntity<Rol> updateRol(@PathVariable Long id, @RequestBody Rol rol) {
+        if (!id.equals(rol.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Rol updatedRol = rolService.save(rol);
@@ -57,7 +57,7 @@ public class RolController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRol(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteRol(@PathVariable Long id) {
         rolService.deleteById(id);
         return ResponseEntity.noContent().build();
     }

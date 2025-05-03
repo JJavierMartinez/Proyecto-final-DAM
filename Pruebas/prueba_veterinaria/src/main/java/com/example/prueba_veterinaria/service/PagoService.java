@@ -24,7 +24,7 @@ public class PagoService {
         return pagoRepository.findAll();
     }
 
-    public Pago findById(UUID id) {
+    public Pago findById(Long id) {
         return pagoRepository.findById(id).orElse(null);
     }
 
@@ -32,7 +32,7 @@ public class PagoService {
         return pagoRepository.save(pago);
     }
 
-    public void deleteById(UUID id) {
+    public void deleteById(Long id) {
         pagoRepository.deleteById(id);
     }
 }

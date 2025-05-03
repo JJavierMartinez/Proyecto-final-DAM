@@ -36,7 +36,7 @@ public class HistorialController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Historial> getHistorialById(@PathVariable UUID id) {
+    public ResponseEntity<Historial> getHistorialById(@PathVariable Long id) {
         Historial historial = historialService.findById(id);
         return historial != null ? ResponseEntity.ok(historial) : ResponseEntity.notFound().build();
     }
@@ -44,12 +44,12 @@ public class HistorialController {
     @PostMapping
     public ResponseEntity<Historial> createHistorial(@RequestBody Historial historial) {
         Historial savedHistorial = historialService.save(historial);
-        return ResponseEntity.created(URI.create("/api/historiales/" + savedHistorial.getUuid())).body(savedHistorial);
+        return ResponseEntity.created(URI.create("/api/historiales/" + savedHistorial.getId())).body(savedHistorial);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Historial> updateHistorial(@PathVariable UUID id, @RequestBody Historial historial) {
-        if (!id.equals(historial.getUuid())) {
+    public ResponseEntity<Historial> updateHistorial(@PathVariable Long id, @RequestBody Historial historial) {
+        if (!id.equals(historial.getId())) {
             return ResponseEntity.badRequest().build();
         }
         Historial updatedHistorial = historialService.save(historial);
@@ -57,13 +57,13 @@ public class HistorialController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteHistorial(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteHistorial(@PathVariable Long id) {
         historialService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/paciente/{pacienteId}")
-    public List<Historial> getHistorialesByPaciente(@PathVariable UUID pacienteId) {
+    public List<Historial> getHistorialesByPaciente(@PathVariable Long pacienteId) {
         return historialService.findByPacienteId(pacienteId);
     }
 }

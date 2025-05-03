@@ -15,9 +15,9 @@ import org.springframework.stereotype.Repository;
  * @author jamar
  */
 @Repository
-public interface PacienteRepository extends JpaRepository<Paciente, UUID>{
+public interface PacienteRepository extends JpaRepository<Paciente, Long>{
     
-    List<Paciente> findByDuenoUuid(UUID duenoId);
+    List<Paciente> findByDuenoId(Long duenoId);
     List<Paciente> findByEspecie(String especie);
     
 }
