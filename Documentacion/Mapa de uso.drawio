@@ -1,0 +1,121 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram name="Página-1" id="QNGv3FQ6Tv-FmEkVCdZH">
+    <mxGraphModel dx="1430" dy="825" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-5" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="331" width="80" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-6" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="380" width="130" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-8" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="368" width="150" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-9" value="Login" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="338" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-10" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="440" y="360" as="sourcePoint" />
+            <mxPoint x="550" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-11" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="440" y="437" as="sourcePoint" />
+            <mxPoint x="550" y="519" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-12" value="Registrado" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="368" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-13" value="No registrado&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="414" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-14" value="Correcto&lt;div&gt;Incorrecto&lt;/div&gt;&lt;div&gt;Vuelta sin actuar&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-15" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="180" width="120" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-16" value="App" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="555" y="140" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-17" value="Usuario" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-18" value="Registro" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-19" value="Home" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-20" value="Citas" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-21" value="Animales" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="301" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-27" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Imak_n_gy1CgfiSC1ntB-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="230" as="sourcePoint" />
+            <mxPoint x="760" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Imak_n_gy1CgfiSC1ntB-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="390" as="sourcePoint" />
+            <mxPoint x="760" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-29" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Imak_n_gy1CgfiSC1ntB-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="390" as="sourcePoint" />
+            <mxPoint x="760" y="316" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-30" value="Log Out" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="580" y="338" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-31" value="Ver citas&lt;div&gt;Solicitar cita&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="241" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-32" value="Ver informacion&lt;div&gt;Cambiar informacion&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="185" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-33" value="Lista de animales" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="310" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-36" value="Cambiar informacion" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="181" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-37" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;width=4.137931034482759;endSize=6.324137931034483;" edge="1" parent="1" target="Imak_n_gy1CgfiSC1ntB-36">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="890" y="210.28142857142845" as="sourcePoint" />
+            <mxPoint x="970" y="211.71" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-38" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1" source="Imak_n_gy1CgfiSC1ntB-36" target="Imak_n_gy1CgfiSC1ntB-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="970" y="120" as="sourcePoint" />
+            <mxPoint x="1020" y="70" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-39" value="Solicitar cita" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="246.5" width="120" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Imak_n_gy1CgfiSC1ntB-40" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;width=4.137931034482759;endSize=6.324137931034483;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="Imak_n_gy1CgfiSC1ntB-39" source="Imak_n_gy1CgfiSC1ntB-31">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="890" y="267.5" as="sourcePoint" />
+            <mxPoint x="970" y="277.21000000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
